@@ -14,9 +14,6 @@ Table of contents
 - API routes (summary)
 - Data model (modules)
 - Error handling & utilities
-- Seeding / importing sample recipes
-- Known issues & recommended fixes
-- Contribution & license
 
 Project overview
 - Simple recipe-sharing REST API with role-based access ("user" / "chef") and JWT auth.
@@ -45,3 +42,33 @@ npm install
 npx nodemon [app.js](http://_vscodecontentref_/0)
 # or
 node [app.js](http://_vscodecontentref_/1)
+
+# filepath: [config.env](http://_vscodecontentref_/2)
+USERNAME=Yahia
+PORT=3000
+DATABASEPASS=your_db_password_here
+DATABASECONNECTION=mongodb+srv://<user>:<DATABASEPASS>@cluster0.bhihlky.mongodb.net/Recipe-Sharing-Platform?retryWrites=true&w=majority&appName=Cluster0
+JWT_SCRET=always_stay_horny
+EXPIRATION_DATE=90d
+
+Running the app
+App entry: app.js
+Connects via utilities/Cluster_connection.js
+Registers routes in Routes/Signup&Login_Route.js, Routes/User_Route.js, Routes/Chef_Route.js
+Global error handler: [utilities/Error Handling Function.js](utilities/Error Handling Function.js)
+
+API routes (Postman documentation summary)
+- https://documenter.getpostman.com/view/43137819/2sB3Wk14ir
+- https://documenter.getpostman.com/view/43137819/2sB3WmS28t
+
+Data model (Modules)
+Recipes: Modules/Recipes.js — schema fields: chef_name, recipe_name, recipe_ingredients[], recipe_steps[], publication_date (auto), ratings_average (auto), ratings_number (auto)
+Reviews: Modules/Reviews.js — includes static method calculateAverage used to update recipe ratings
+Users: Modules/Users.js — password hashing in pre-save hook, passconfirmation validator, verifypassword method, checkIfPassChange method
+
+Error handling & utilities
+Error wrapper object: [utilities/Upgraded Error Object.js](utilities/Upgraded Error Object.js) — exported Upgraded_Error
+Global error handler middleware: [utilities/Error Handling Function.js](utilities/Error Handling Function.js)
+DB connection helper: utilities/Cluster_connection.js
+- https://documenter.getpostman.com/view/43137819/2sB3WmS28u
+
