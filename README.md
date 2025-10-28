@@ -31,6 +31,7 @@ DATABASECONNECTION=mongodb+srv://<user>:<DATABASEPASS>@cluster0.mongodb.net/Reci
 JWT_SCRET=always_stay_horny
 EXPIRATION_DATE=90d
 ```
+Note: Change the DATABASE and DATABASECONNECTION depending on your database
 ## 📘 Postman API Documentation
 
 You can explore and test all API endpoints using the following Postman collections:
