@@ -38,7 +38,7 @@ You can explore and test all API endpoints using the following Postman collectio
 
 | Collection | Description | Link |
 |-------------|--------------|------|
-| **API Collection #1** | Core recipe and user endpoints | [View on Postman →](https://documenter.getpostman.com/view/43137819/2sB3Wk14ir) |
+| **API Collection #1** | Core recipe and user endpoints | [View on Postman →](https://documenter.getpostman.com/view/43137819/2sB3Wk14ir) | 
 | **API Collection #2** | Authentication & chef-specific routes | [View on Postman →](https://documenter.getpostman.com/view/43137819/2sB3WmS28t) |
 | **API Collection #3** | Full project documentation | [View on Postman →](https://documenter.getpostman.com/view/43137819/2sB3WmS28u) |
 
